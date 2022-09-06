@@ -1,0 +1,10 @@
+{
+  "name": "PetHome",
+  "version": "1.0.0",
+  "description": "Home for every pet",
+  "main": "index.js",
+  "repository": "https://github.com/PhilippCoder3000/PetHome.git",
+  "author": "Philipp Zakharov",
+  "license": "MIT",
+  "private": false
+}
