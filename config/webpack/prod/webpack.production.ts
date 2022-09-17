@@ -1,6 +1,3 @@
-import path from 'path';
-import webpack from 'webpack';
-import HTMLWebpackPlugin from 'html-webpack-plugin';
 import { plugins } from './plugins';
 import { rules } from './rules';
 import { Configuration, WebpackOptions } from '../types';

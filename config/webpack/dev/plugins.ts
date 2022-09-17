@@ -1,7 +1,7 @@
 import webpack from 'webpack';
-import path from 'path';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import { WebpackOptions } from '../types';
+import ESLintPlugin from 'eslint-webpack-plugin'
 
 
 export function plugins(options: WebpackOptions): webpack.WebpackPluginInstance[] {
@@ -11,5 +11,6 @@ export function plugins(options: WebpackOptions): webpack.WebpackPluginInstance[
       title: 'Development',
     }),
     new webpack.ProgressPlugin(),
+    new ESLintPlugin(),
   ]
 }

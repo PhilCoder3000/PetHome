@@ -1,5 +1,6 @@
 import React from 'react';
 import Routing from '../pages/Routing';
+import NavMenu from '../widgets/NavMenu';
 import RouterProvider from './providers/RouterProvider';
 import StoreProvider from './providers/StoreProvider';
 import SuspenseProvider from './providers/SuspenseProvider';
@@ -11,6 +12,7 @@ function App() {
       <ThemeProvider>
         <StoreProvider>
           <RouterProvider>
+            <NavMenu />
             <Routing />
           </RouterProvider>
         </StoreProvider>

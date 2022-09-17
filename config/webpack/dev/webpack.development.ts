@@ -1,5 +1,3 @@
-import path from 'path';
-import webpack from 'webpack';
 import { Configuration, WebpackOptions } from '../types';
 import { plugins } from './plugins';
 import { rules } from './rules';
@@ -7,6 +5,9 @@ import { rules } from './rules';
 function development(options: WebpackOptions): Configuration {
   return {
     entry: options.entry,
+    output: {
+      publicPath: '/',
+    },
     mode: 'development',
     devServer: {
       port: 3000,
