@@ -20,6 +20,7 @@ const theme = createTheme({
       default: '#181818',
       paper: '#0f0f0f',
     },
+    divider: '#424242',
   },
 });
 
