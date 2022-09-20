@@ -4,8 +4,17 @@ declare module '*.svg' {
 }
 
 declare global {
-  const REACT_APP_CLIENT_ID: string;
-  const REACT_APP_CLIENT_SECRET: string;
+  interface Window {
+    google?: Google;
+  }
+  namespace NodeJS {
+    interface ProcessEnv {
+      REACT_APP_GOOGLE_API_KEY: string;
+      REACT_APP_CLIENT_ID: string;
+      REACT_APP_CLIENT_SECRET: string;
+    }
+  }
 }
+
 
 export {};
