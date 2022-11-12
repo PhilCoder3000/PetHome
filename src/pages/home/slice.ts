@@ -1,30 +1,38 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../../app/store/configureStore';
 
 export interface HomeSlice {
-  value: number
+  userData: {
+    access_token: string;
+    token_type: string;
+    expires_in: number;
+    scope: string;
+    authuser: string;
+    prompt: string;
+  }
 }
 
 const initialState: HomeSlice = {
-  value: 0,
-}
+  userData: {
+    access_token: '',
+    token_type: '',
+    expires_in: 3599,
+    scope: '',
+    authuser: '0',
+    prompt: '',
+  }
+};
 
 export const homeSlice = createSlice({
   name: 'home',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+    setUserData: (state, action) => {
+      state.userData = action.payload;
     },
   },
-})
+});
 
-export const { increment, decrement, incrementByAmount } = homeSlice.actions
+export const { setUserData } = homeSlice.actions;
 
-export const homeReducer = homeSlice.reducer
+export const homeReducer = homeSlice.reducer;
